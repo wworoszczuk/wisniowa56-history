@@ -2,10 +2,79 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiśniowa 56 - historia</title>
+    <title>Wiśniowa 56 - HISTORIA</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    
+    <div id="progress-bar"></div>
+
+    <nav id="nav">
+        <img src="assets/images/arrow.svg" alt="oś czasu" id="timeline">
+        <ul>
+            <a href="#general"><li>Ogólne</li></a>
+            <a href="#warfield-map"><li>Plan Pola</li></a>
+            <a href="#barracks-map"><li>Plan Koszar</li></a>
+        </ul>
+    </nav>
+    <div id="emblemat123">
+        <img src="assets/images/emblemat123.svg">
+    </div>
+    <main>
+        <header>
+            wiśniowa 56
+            <br>
+            <span>MOKOTÓW | WARSZAWA | POLSKA</span>
+        </header>
+    </main>
+
+    <section id="general">
+
+    </section>
+
+    <section id="warfield-map">
+        PLAN POLA
+    </section>
+
+    <section id="barracks-map">
+        PLAN KOSZAR
+    </section>
+
+    <footer>
+        <div>
+            Opracowanie merytoryczne i zdjęcia: Joanna Kamola-Okońska
+        </div>
+        <div>
+            Wykonanie strony: Weronika Woroszczuk
+        </div>
+    </footer>
+
+    <script>
+        window.onscroll = function() {progressBar()}
+
+        function progressBar() {
+            winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+            if (winScroll > window.innerHeight){
+                document.getElementById("timeline").src = "assets/images/arrow_red.svg";
+                document.getElementById("progress-bar").style.background = "var(--primary-color)";
+            }
+            if (winScroll < window.innerHeight){
+                document.getElementById("timeline").src = "assets/images/arrow.svg";
+                document.getElementById("progress-bar").style.background = "var(--light-color)";
+            }
+            console.log(winScroll)
+            if (winScroll > 1){
+                document.getElementById("nav").style.opacity = "1";
+                document.getElementById("timeline").style.opacity = "1";
+            }
+            if (winScroll < 1){
+                document.getElementById("nav").style.opacity = "0";
+                document.getElementById("timeline").style.opacity = "0";
+            }
+        }
+
+    </script>
 </body>
 </html>
