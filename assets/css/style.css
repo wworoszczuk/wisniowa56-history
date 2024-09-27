@@ -4,12 +4,21 @@
 :root{
     --dark-color: #1F2123;
     --primary-color: #621122;
+    --primary-transparent-color: rgba(98, 17, 34, 0.66);
     --light-color: #FDFDFF;
 }
 
 ::selection{
     background-color: var(--primary-color);
     color: var(--light-color);
+}
+
+.font-primary{
+    font-family: "Holtwood One SC", serif;
+}
+
+.font-secondary{
+    font-family: "Raleway", serif;
 }
 
 html{
@@ -32,6 +41,10 @@ a{
     width: 0;
     position: fixed;
     top: 0;
+}
+
+menu{
+    display: none;
 }
 
 nav>img,nav{
@@ -60,7 +73,17 @@ nav>ul>*{
     border: 1px solid var(--light-color);
     border-radius: 5px;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
+
+
+nav>ul>*:hover {
+    transform: scale(1.1); /* Powiększenie podczas najechania myszką */
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 5px; /* Zaokrąglenie rogów */
+}
+
 
 
 #emblemat123{
@@ -95,23 +118,111 @@ main>header>span{
 
 section{
     height: 100vh;
+}
+
+section#general{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    scroll-snap-align: start;
 }
 
-section>*{
+section#general>*{
     height: 100%;
     padding: 50px;
-    margin-top: 300px;
+    margin-top: 20%;
+}
+
+section#warfield-map{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section#warfield-map>h1{
+    text-align: center;
+    font-size: 150%;
+    margin-top: 5%;
+}
+
+section#warfield-map>p{
+    text-align: center;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+section#warfield-map>div{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+section#warfield-map>div>div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.image-container{
+    overflow: hidden;
+    position: relative;
+
+}
+
+.image-container img{
+    z-index: -1;
+}
+
+.image-container p{
+    margin: 0;
+}
+
+.image-container img.small-img{
+    width: 100%;
+}
+
+.text-container{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--primary-transparent-color);
+    color: var(--light-color);
+    opacity: 0; /* Początkowo niewidoczny */
+    transition: opacity 0.3s ease; /* Płynne przejście dla opacity */
+    padding: 10px; /* Padding wewnętrzny dla tekstu */
+}
+
+.image-container:hover .text-container{
+    opacity: 1;
+}
+
+section#warfield-map>div>div>*{
+    margin: 10%;
 }
 
 .text-documentary{
     font-family: "Raleway", serif;
     text-align: justify;
 }
+
+section#barracks-map{
+    display: flex;
+    justify-content: space-around;
+}
+
+section#barracks-map>h1{
+    text-align: center;
+    font-size: 150%;
+    margin-top: 5%;
+}
+
+
 
 footer{
     display: flex;
@@ -124,4 +235,12 @@ footer{
     border-top: 2px solid var(--primary-color);
 }
 
+/*mobile phone*/
+@media only screen and (max-width: 600px) {
 
+}
+
+/*tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+}
