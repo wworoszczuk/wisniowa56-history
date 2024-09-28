@@ -37,14 +37,10 @@ a{
 
 #progress-bar{
     background-color: var(--light-color);
-    height: 3px;
+    height: 0.7%;
     width: 0;
     position: fixed;
     top: 0;
-}
-
-menu{
-    display: none;
 }
 
 nav>img,nav{
@@ -84,6 +80,18 @@ nav>ul>*:hover {
     border-radius: 5px; /* Zaokrąglenie rogów */
 }
 
+nav{
+    z-index: 2000;
+}
+
+#timeline{
+    z-index: 1000;
+}
+
+.text-container{
+    z-index: 0;
+}
+
 
 
 #emblemat123{
@@ -106,13 +114,13 @@ main{
 main>header{
     text-align: center;
     font-weight: 400;
-    font-size: 500%;
+    font-size: 5vw;
     font-style: normal;
     line-height: 1;
 }
 
 main>header>span{
-    font-size: 30%;
+    font-size: 1.5vw;
     letter-spacing: 7px;
 }
 
@@ -176,9 +184,6 @@ section#warfield-map>div>div{
 
 }
 
-.image-container img{
-    z-index: -1;
-}
 
 .image-container p{
     margin: 0;
@@ -235,12 +240,84 @@ footer{
     border-top: 2px solid var(--primary-color);
 }
 
+#rotate-message{
+    display: none;
+}
+
+
 /*mobile phone*/
 @media only screen and (max-width: 600px) {
+    #rotate-message {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
 
+    .rotate-text {
+        font-family: "Raleway", serif;
+        font-size: 6vw;
+        text-align: center;
+        animation: pulse 2s infinite;
+    }
+
+    /* Animacja dla tekstu */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            transform: rotate(50deg);
+        }
+        50% {
+            transform: scale(1.1);
+            transform: rotate(-50deg);
+        }
+        100% {
+            transform: scale(1);
+            transform: rotate(50deg);
+        }
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    *:not(html, body, #rotate-message, .rotate-text){
+        display: none;
+    }
 }
 
 /*tablet*/
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
+    #progress-bar{
+        height: 1.5%;
+    }
 
+    section{
+        height: auto;
+        text-align: center;
+    }
+
+    section#general{
+        flex-direction: column;
+    }
+    section#general>*{
+        padding: 3%;
+        margin-top: 0;
+    }
+
+    section#warfield-map{
+        flex-direction: column;
+    }
+
+    section#warfield-map>div{
+        flex-direction: column;
+    }
 }
