@@ -41,6 +41,7 @@ a{
     width: 0;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 nav>img,nav{
@@ -219,14 +220,18 @@ section#warfield-map>div>div>*{
 section#barracks-map{
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
+    padding: 5%;
 }
 
-section#barracks-map>h1{
+section#barracks-map h1{
     text-align: center;
-    font-size: 150%;
-    margin-top: 5%;
+    font-size: 120%;
 }
 
+section#barracks-map>div{
+    padding: 2%;
+}
 
 
 footer{
@@ -318,6 +323,10 @@ footer{
     }
 
     section#warfield-map>div{
+        flex-direction: column;
+    }
+
+    section#barracks-map{
         flex-direction: column;
     }
 }
