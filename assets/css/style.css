@@ -233,6 +233,31 @@ section#barracks-map>div{
     padding: 2%;
 }
 
+section#kuryer-codzienny h1{
+    padding-top: 5%;
+    text-align: center;
+}
+
+section#kuryer-codzienny>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#kuryer-codzienny>div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#kuryer-codzienny>div>img{
+    width: 40%;
+}
+
+section#kuryer-codzienny>div>div>div{
+    margin: 5%;
+}
 
 footer{
     display: flex;
@@ -328,5 +353,13 @@ footer{
 
     section#barracks-map{
         flex-direction: column;
+    }
+
+    section#kuryer-codzienny div{
+        flex-direction: column;
+    }
+
+    section#kuryer-codzienny>div>img{
+        width: 70%;
     }
 }
