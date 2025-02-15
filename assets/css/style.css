@@ -103,22 +103,6 @@ a{
 }
 
 
-#timeline{
-    z-index: 1000;
-}
-
-.text-container{
-    z-index: 0;
-}
-
-
-
-#emblemat123{
-    position: fixed;
-    bottom: 0;
-    padding: 20px;
-    display: none;
-}
 
 main{
     background-color: var(--dark-color);
@@ -277,6 +261,169 @@ section#kuryer-codzienny>div>div>div{
     margin: 5%;
 }
 
+section#rozliczenie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#rozliczenie h1{
+    text-align: center;
+}
+
+section#rozliczenie>div{
+    display: flex;
+    flex-direction: row;
+}
+
+section#rozliczenie #rozliczenie-content{
+    width: 30%;
+}
+
+section#rozliczenie>div>*{
+    margin: 10px;
+}
+
+section#standardy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#standardy>h1{
+    font-size: 170%;
+}
+
+section#standardy>h3{
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.grid-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+section#cerkiew{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#cerkiew ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section#cerkiew li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+section#cerkiew>h1{
+    font-size: 170%;
+}
+
+section#cerkiew>h3{
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+section#cerkiew>div{
+    display: flex;
+    flex-direction: row;
+}
+
+section#cerkiew>div>*{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+section#cerkiew img{
+    height: 80vh;
+}
+
+section#zdjecie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/gwardia.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section#zdjecie h1{
+    background-color: white;
+    padding: 5px;
+}
+
+.content-overlay {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);  /* Półprzezroczysta warstwa na tle */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.2em;
+    padding: 0 48px;
+    color: white;
+}
+
+.profile-blocks {
+    display: flex;
+    flex-wrap: wrap; /* Zapewnia zawijanie się wierszy */
+    justify-content: center; /* Centruje elementy */
+    gap: 20px;
+}
+
+.profile {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: auto; /* Pozwala na dopasowanie szerokości do zawartości */
+    min-width: 200px;
+    max-width: 300px; /* Ogranicza szerokość */
+    text-align: center;
+    flex: 1 1 250px; /* Dynamiczne skalowanie, minimum 250px */
+}
+
+.profile-img {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.profile-description {
+    font-size: 0.9em;
+    color: #333;
+    font-weight: bold;
+}
+
 footer{
     display: flex;
     flex-direction: row;
@@ -288,8 +435,63 @@ footer{
     border-top: 2px solid var(--primary-color);
 }
 
+#emblemat123{
+    bottom: 0;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
 #rotate-message{
     display: none;
+}
+
+#openModal{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+/* Styl dla tła modala */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+/* Przycisk zamykania */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-btn:hover {
+    color: black;
 }
 
 
@@ -379,5 +581,10 @@ footer{
 
     section#kuryer-codzienny>div>img{
         width: 70%;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
     }
 }
