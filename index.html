@@ -18,13 +18,15 @@
 
 
     <nav id="nav">
-        <img src="assets/images/arrow.svg" alt="oś czasu" id="timeline">
-        <ul>
-            <a href="#general"><li>Wstęp</li></a>
-            <a href="#warfield-map"><li>1895 - pole wojenne</li></a>
-            <a href="#barracks-map"><li>1895 - koszary</li></a>
-            <a href="#kuryer-codzienny"><li>1897</li></a>
-        </ul>
+        <button id="menu-button">📜</button>
+        <div id="menu" class="hidden">
+            <ul>
+                <a href="#general"><li>Wstęp 👋</li></a>
+                <a href="#warfield-map"><li>1895 - pole wojenne ⚔️</li></a>
+                <a href="#barracks-map"><li>1895 - koszary</li></a>
+                <a href="#kuryer-codzienny"><li>1897 </li></a>
+            </ul>
+        </div>
     </nav>
     <div id="emblemat123">
         <img src="assets/images/emblemat123.svg">
@@ -195,23 +197,27 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("progress-bar").style.width = scrolled + "%";
             if (winScroll > window.innerHeight){
-                document.getElementById("timeline").src = "assets/images/arrow_red.svg";
                 document.getElementById("progress-bar").style.background = "var(--primary-color)";
             }
             if (winScroll < window.innerHeight){
-                document.getElementById("timeline").src = "assets/images/arrow.svg";
                 document.getElementById("progress-bar").style.background = "var(--light-color)";
             }
-            console.log(winScroll)
-            if (winScroll > 1){
-                document.getElementById("nav").style.opacity = "1";
-                document.getElementById("timeline").style.opacity = "1";
-            }
-            if (winScroll < 1){
-                document.getElementById("nav").style.opacity = "0";
-                document.getElementById("timeline").style.opacity = "0";
-            }
         }
+
+        document.getElementById("menu-button").addEventListener("click", function() {
+            let menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        document.querySelectorAll("#menu a").forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                let targetId = this.getAttribute("href").substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                document.getElementById("menu").style.display = "none";
+            });
+        });
+
     </script>
 </body>
 </html>
