@@ -1268,6 +1268,15 @@
             menu.style.display = menu.style.display === "block" ? "none" : "block";
         });
 
+        document.addEventListener("click", function (event) {
+            let menu = document.getElementById("menu");
+            let button = document.getElementById("menu-button");
+
+            if (menu.style.display === "block" && !menu.contains(event.target) && event.target !== button) {
+                menu.style.display = "none";
+            }
+        });
+
         document.querySelectorAll("#menu a").forEach(link => {
             link.addEventListener("click", function(e) {
                 e.preventDefault();
