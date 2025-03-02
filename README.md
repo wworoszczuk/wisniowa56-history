@@ -15,3 +15,8 @@ Muszę uprzedzić, że wybór zdjęć jest **„Wiśniowocentryczny”**, co zna
 Dziś jest schowany w gęstej zabudowie i zieleni i trudno się tego domyślić, ale jego dawni mieszkańcy, dzięki sąsiedztwu Pola Mokotowskiego, mieli doskonały punkt widokowy do oglądania historii tego miasta i kraju.  
 
 Życzę wszystkim oglądającym tyle samo **zachwytów, zdziwień i zaskoczeń**, ile towarzyszyło mi w trakcie zbierania tych materiałów.
+
+---  
+
+**~ Joanna Kamola-Okońska**  
+*Wicedyrektor Zespołu Szkół Licealnych i Technicznych nr 1 w Warszawie*  
