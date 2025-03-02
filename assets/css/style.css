@@ -363,7 +363,7 @@ section#zdjecie{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../images/gwardia.png");
+    background-image: url("../images/gwardia.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
