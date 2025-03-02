@@ -16,7 +16,7 @@ Dziś jest schowany w gęstej zabudowie i zieleni i trudno się tego domyślić,
 
 Życzę wszystkim oglądającym tyle samo **zachwytów, zdziwień i zaskoczeń**, ile towarzyszyło mi w trakcie zbierania tych materiałów.
 
----  
+---
 
-**~ Joanna Kamola-Okońska**  
-*Wicedyrektor Zespołu Szkół Licealnych i Technicznych nr 1 w Warszawie*  
+**Joanna Kamola-Okońska**  
+*Wicedyrektor Zespołu Szkół Licealnych i Technicznych nr 1 w Warszawie*
