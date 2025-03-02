@@ -1,4 +1,4 @@
-# Historia naszego budynku  
+# O początkach słów kilka 
 
 Wszystko zaczęło się kilka lub kilkanaście lat temu od znalezienia tego zdjęcia. Można na nim rozpoznać środkową klatkę naszego budynku od strony boiska. Nie mamy żadnej pewności, czy nie jest to może inny z czterech bliźniaczych budynków, choć dopatrzyliśmy się nawet śladu na cegłach po tabliczce z nazwą pułku. Możemy tylko zgadywać.  
 
