@@ -1172,8 +1172,7 @@ footer{
 /*mobile phone*/
 @media only screen and (max-width: 600px) {
     #rotate-message {
-        display: none;
-        position: fixed;
+        position: fixed; !important;
         top: 0;
         left: 0;
         width: 100vw;
@@ -1196,15 +1195,12 @@ footer{
     /* Animacja dla tekstu */
     @keyframes pulse {
         0% {
-            transform: scale(1);
             transform: rotate(50deg);
         }
         50% {
-            transform: scale(1.1);
             transform: rotate(-50deg);
         }
         100% {
-            transform: scale(1);
             transform: rotate(50deg);
         }
     }
@@ -1261,4 +1257,9 @@ footer{
         flex-direction: column;
         align-items: center;
     }
+}
+
+/*desktop*/
+@media only screen and (min-width: 1600px) {
+
 }
