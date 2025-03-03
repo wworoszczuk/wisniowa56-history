@@ -907,6 +907,7 @@ section#plany-miasta>div{
 }
 
 #pole-mokotowskie{
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
