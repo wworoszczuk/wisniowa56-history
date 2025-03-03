@@ -1220,6 +1220,10 @@ footer{
         height: 1.5%;
     }
 
+    .text-container{
+        display: none;
+    }
+
     section{
         height: auto;
         text-align: center;

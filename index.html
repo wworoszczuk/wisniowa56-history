@@ -1315,6 +1315,9 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
+
+            const mediaQuery = window.matchMedia('(min-width: 600px) and (max-width: 1024px)');
+
             document.querySelectorAll("img[src$='.webp']").forEach(img => {
                 img.style.cursor = "pointer"; // Zmiana kursora na wskaźnik
                 img.addEventListener("click", function () {
@@ -1345,6 +1348,32 @@
                 fullImg.style.cursor = "zoom-out";
 
                 overlay.appendChild(fullImg);
+
+                if (mediaQuery.matches) {
+                    const textContainer = img.closest('.image-container')?.querySelector('.text-container') ||
+                        img.closest('.image-container')?.querySelector('.caption-other');
+
+                    if (textContainer) {
+                        const textContent = textContainer.textContent.trim();
+                        if (textContent) {
+                            const textDiv = document.createElement("div");
+                            textDiv.textContent = textContent;
+                            textDiv.style.position = "absolute";
+                            textDiv.style.bottom = "20px";
+                            textDiv.style.left = "50%";
+                            textDiv.style.transform = "translateX(-50%)";
+                            textDiv.style.color = "white";
+                            textDiv.style.background = "rgba(0, 0, 0, 0.7)";
+                            textDiv.style.padding = "10px 20px";
+                            textDiv.style.borderRadius = "5px";
+                            textDiv.style.maxWidth = "80vw";
+                            textDiv.style.textAlign = "center";
+
+                            overlay.appendChild(textDiv);
+                        }
+                    }
+                }
+
                 document.body.appendChild(overlay);
 
                 overlay.addEventListener("click", function () {
